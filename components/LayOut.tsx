@@ -14,8 +14,7 @@ export default function LayOut({ children }: LayoutProps): JSX.Element {
       {/* <SiteHeader /> */}
       <NavigationBar />
       <main>
-
-        {/* {children} */}
+        {children}
         <Footer />
       </main>
     </>

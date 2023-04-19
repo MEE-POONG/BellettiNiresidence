@@ -33,12 +33,12 @@ export default function HomePage(): JSX.Element {
       </Head>
       <div className='home-page'>
         <HeroSection />
-        <SteviaSection id={''} translateX={0} translateY={srcollBG} />
+        {/* <SteviaSection id={''} translateX={0} translateY={srcollBG} />
         <PricingSection />
         <AboutSection />
         <ArtistsSection />
         <ScheduleSection/>
-        <ContactSection />
+        <ContactSection /> */}
       </div>
     </LayOut>
   );

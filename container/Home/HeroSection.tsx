@@ -5,7 +5,7 @@ import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
 import { BsClock, BsFacebook, BsGeoAlt, BsInstagram, BsLine } from 'react-icons/bs';
 import { intro, openingHours, setting } from '@/test';
 
-const HeroSection = () => {
+const HeroSection: React.FC = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,86 +17,72 @@ const HeroSection = () => {
   const addressShow = setting[0];
 
   return (
-    <section className="hero-section" id="section_1">
+    <section className="hero" id="section_1">
       <div className="section-overlay"></div>
-
-      <Container className="d-flex justify-content-center align-items-center">
+      <Container>
         <Row>
-          {homeIntro?.map((homeIntro) => (
-            <Col key={homeIntro.pagelist} className="mt-lg-auto mb-lg-5 text-center">
-              <h3 className='f-c-gold f-s-philosopher' data-aos="fade-down" data-aos-easing="ease">{homeIntro?.title}</h3>
-              <h1 className="f-c-gold mb-lg-5 mb-md-3" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="300">{homeIntro?.srcipOne}</h1>
-              <h1 className="f-c-gold mb-lg-5 mb-md-3" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="600">{homeIntro?.srcipTwo}</h1>
-              <Link className="gold smoothscroll " href="/about" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="600">
-                {homeIntro?.textButton}
-              </Link>
-            </Col>
-          ))}
-          <Col lg={12} className="mt-auto d-flex flex-column flex-lg-row text-center"  data-aos="fade-down" data-aos-easing="ease">
-            <div className="date-wrap">
-              <h5 className="text-white">
-                <i className="custom-icon me-2"><BsClock /></i>
-                {currentDay?.opening} -   {currentDay?.closed}
-              </h5>
+          <Col lg={5} xs={12} className="m-auto">
+            <div className="heroText">
+              <h1 className="text-white mb-lg-5 mb-3">Bellettini Residence</h1>
             </div>
-            <div className="location-wrap mx-auto py-3 py-lg-0" >
-              <h5 className="text-white">
-                <i className="custom-icon me-2"> <BsGeoAlt /></i>
-                {addressShow?.addressOne + " " + addressShow?.addressTwo + " " + addressShow?.addressThree + " " + addressShow?.city + " " + addressShow?.postalCode}
-              </h5>
-            </div>
+          </Col>
+          <Col lg={7} xs={12}>
+            <Carousel fade>
+              <Carousel.Item>
+                <div className="carousel-image-wrap">
+                  <img
+                    src="./assets/images/condo_slide/710_0003-1024x683.jpg"
+                    className="img-fluid carousel-image"
+                    alt=""
+                  />
+                </div>
 
-            <div className="social-share" >
-              <ul className="social-icon d-flex align-items-center justify-content-center">
-                <span className="text-white me-3">Share:</span>
+                <Carousel.Caption>
+                  <h4 className="hero-text">Type A</h4>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="carousel-image-wrap">
+                  <img
+                    src="./assets/images/condo_slide/710_0025-1024x683.jpg"
+                    className="img-fluid carousel-image"
+                    alt=""
+                  />
+                </div>
 
-                <li className="social-icon-item">
-                  <Link href={addressShow?.facebookLink} className="social-icon-link">
-                    <BsFacebook />
-                  </Link>
-                </li>
+                <Carousel.Caption>
+                  <div className="d-flex align-items-center">
+                    <h4 className="hero-text">Type B</h4>
+                  </div>
+                </Carousel.Caption>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className="carousel-image-wrap">
+                  <img
+                    src="./assets/images/condo_slide/710_0027-1024x704.jpg"
+                    className="img-fluid carousel-image"
+                    alt=""
+                  />
+                </div>
 
-                <li className="social-icon-item">
-                  <Link href={addressShow?.intragarmLink} className="social-icon-link ">
-                    <BsInstagram />
-                  </Link>
-                </li>
-
-                <li className="social-icon-item">
-                  <Link href={addressShow?.lineLinK} className="social-icon-link ">
-                    <BsLine />
-                  </Link>
-                </li>
-              </ul>
-            </div>
+                <Carousel.Caption>
+                  <div className="d-flex align-items-center">
+                    <h4 className="hero-text">Type C</h4>
+                  </div>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
           </Col>
         </Row>
       </Container>
 
       <div className="video-wrap">
-        <Carousel className="custom-video" controls={false} indicators={false}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/images/gallery/18.jpg"
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/images/gallery/8.jpg"
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src="/images/gallery/16.jpg"
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
+        <video autoPlay loop muted className="custom-video" poster="">
+          <source
+            src="./assets/video/production_ID_3769033.mp4"
+            type="video/mp4"
+          />
+        </video>
       </div>
     </section>
   );
