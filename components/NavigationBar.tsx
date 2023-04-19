@@ -42,37 +42,31 @@ export default function NavigationBar(): JSX.Element {
                 Residences
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/room_type" className='nav-link' >
                 Room Type
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/floor_plans" className='nav-link' >
                 Floor Plans
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/amenities" className='nav-link' >
                 Amenities
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/engage" className='nav-link' >
                 Engage
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/inquire" className='nav-link' >
                 Inquire
               </Link>
             </Nav.Item>
-
             <Nav.Item>
               <Link href="/gallery" className='nav-link' >
                 Gallery

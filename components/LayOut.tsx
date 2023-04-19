@@ -16,7 +16,7 @@ export default function LayOut({ children }: LayoutProps): JSX.Element {
       <main>
 
         {/* {children} */}
-        {/* <Footer /> */}
+        <Footer />
       </main>
     </>
   );

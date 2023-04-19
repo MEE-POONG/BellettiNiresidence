@@ -1,145 +1,89 @@
-import Link from "next/link";
-import React from "react";
-import { Container, Row, Col } from 'react-bootstrap';
-import { BsTwitter, BsApple, BsInstagram, BsYoutube, BsPinterest } from 'react-icons/bs';
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import { useRouter } from "next/router";
+
 const Footer: React.FC = () => {
+  const router = useRouter();
+
+  const handleDirectionsClick = () => {
+    router.push('https://goo.gl/maps/wZVGLA7q64uC1s886');
+  };
+
   return (
-    <>
-      <footer className="bg-black border-top border-dark">
-        <div className="site-footer-top">
-          <Container>
-            <Row>
-              <Col lg={6} xs={12}>
-                <h2 className="text-dark f-s-philosopher mb-lg-0">T Active Stevia</h2>
-              </Col>
+    <footer className="site-footer section-padding">
+      <Container>
+        <Row>
+          <Col xs={12}>
+            <h4 className="text-white mb-4 me-5">Crispy Kitchen</h4>
+          </Col>
 
-              <Col lg={6} xs={12} className="d-flex justify-content-lg-end align-items-center">
-                <ul className="social-icon d-flex justify-content-lg-end">
-                  <li className="social-icon-item">
-                    <a href="#" className="social-icon-link">
-                      <BsTwitter />
-                    </a>
-                  </li>
+          <Col lg={4} md={7} xs={12} className="tooplate-mt30">
+            <h6 className="text-white mb-lg-4 mb-3">Location</h6>
 
-                  <li className="social-icon-item">
-                    <a href="#" className="social-icon-link">
-                      <BsApple />
-                    </a>
-                  </li>
+            <p>121 Einstein Loop N, Bronx, NY 10475, United States</p>
 
-                  <li className="social-icon-item">
-                    <a href="#" className="social-icon-link">
-                      <BsInstagram />
-                    </a>
-                  </li>
+            <Button variant="dark" className="mt-2" onClick={handleDirectionsClick}>
+              Directions
+            </Button>
+          </Col>
 
-                  <li className="social-icon-item">
-                    <a href="#" className="social-icon-link">
-                      <BsYoutube />
-                    </a>
-                  </li>
+          <Col lg={4} md={5} xs={12} className="tooplate-mt30">
+            <h6 className="text-white mb-lg-4 mb-3">Opening Hours</h6>
 
-                  <li className="social-icon-item">
-                    <a href="#" className="social-icon-link">
-                      <BsPinterest />
-                    </a>
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-          </Container>
+            <p className="mb-2">Monday - Friday</p>
 
-        </div>
-        <Container>
-          <Row>
-            <Col lg={6} className="mb-4 pb-2">
-              <h5 className="site-footer-title mb-3">Links</h5>
-              <ul className="site-footer-links">
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">Home</a>
-                </li>
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">About</a>
-                </li>
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">Artists</a>
-                </li>
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">Schedule</a>
-                </li>
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">Pricing</a>
-                </li>
-                <li className="site-footer-link-item">
-                  <a href="#" className="site-footer-link">Contact</a>
-                </li>
-              </ul>
-            </Col>
-            <Col lg={3} md={6} className="mb-4 mb-lg-0">
-              <h5 className="site-footer-title mb-3">Have a question?</h5>
-              <p className="text-white d-flex mb-1">
-                <a href="tel: 090-080-0760" className="site-footer-link">090-080-0760</a>
-              </p>
-              <p className="text-white d-flex">
-                <a href="mailto:hello@company.com" className="site-footer-link">hello@company.com</a>
-              </p>
-            </Col>
-            <Col lg={3} md={6} className="mb-4 mb-lg-0 mb-md-0">
-              <h5 className="site-footer-title mb-3">Location</h5>
-              <p className="text-white d-flex mt-3 mb-2">
-                46/4 Ratchanikun, Nai Mueang, Nakhon Ratchasima 30000
-              </p>
-              <a className="link-fx-1 color-contrast-higher mt-3" href="#">
-                <span>Our Maps</span>
-                <svg className="icon" viewBox="0 0 32 32" aria-hidden="true">
-                  <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="16" cy="16" r="15.5"></circle>
-                    <line x1="10" y1="18" x2="16" y2="12"></line>
-                    <line x1="16" y1="12" x2="22" y2="18"></line>
-                  </g>
-                </svg>
+            <p>10:00 AM - 08:00 PM</p>
+
+            <p>
+              Tel:{' '}
+              <a href="tel:010-02-0340" className="tel-link">
+                010-02-0340
               </a>
-            </Col>
-          </Row>
-        </Container>
-        <div className="site-footer-bottom">
-          <Container>
-            <Row>
-              <Col lg={3} xs={12} className="mt-5">
-                <p className="copyright-text">
-                  Copyright © 2036 ME PROMPT TECHNOLOGY COMPANY LIMITED
-                </p>
-                <p className="copy-text">
-                  Distributed by:{' '}
-                  <Link href="https://themewagon.com">ThemeMePromt</Link>
-                </p>
-              </Col>
-              <Col lg={8} xs={12} className="mt-lg-5">
-                <ul className="site-footer-links">
-                  <li className="site-footer-link-item">
-                    <Link href="#" className="site-footer-link">
-                      Terms &amp; Conditions
-                    </Link>
-                  </li>
+            </p>
+          </Col>
 
-                  <li className="site-footer-link-item">
-                    <Link href="#" className="site-footer-link">
-                      Privacy Policy
-                    </Link>
-                  </li>
+          <Col lg={4} md={6} xs={12} className="tooplate-mt30">
+            <h6 className="text-white mb-lg-4 mb-3">Social</h6>
 
-                  <li className="site-footer-link-item">
-                    <Link href="#" className="site-footer-link">
-                      Your Feedback
-                    </Link>
-                  </li>
-                </ul>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </footer>
-    </>
+            <ul className="social-icon">
+              {/* Replace the '#' with your desired social media links */}
+              <li>
+                <a href="#" className="social-icon-link bi-facebook"></a>
+              </li>
+
+              <li>
+                <a href="#" className="social-icon-link bi-instagram"></a>
+              </li>
+
+              <li>
+                <a
+                  href="https://twitter.com/search?q=tooplate.com&src=typed_query&f=live"
+                  target="_blank"
+                  className="social-icon-link bi-twitter"
+                ></a>
+              </li>
+
+              <li>
+                <a href="#" className="social-icon-link bi-youtube"></a>
+              </li>
+            </ul>
+
+            <p className="copyright-text tooplate-mt60">
+              Copyright © 2022 Crispy Kitchen Co., Ltd.
+              <br />
+              Design:{' '}
+              <a
+                rel="nofollow"
+                href="https://www.tooplate.com/"
+                target="_blank"
+              >
+                Tooplate
+              </a>
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </footer>
   );
 };
 
