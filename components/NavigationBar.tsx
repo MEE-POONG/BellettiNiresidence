@@ -23,6 +23,7 @@ export default function NavigationBar(): JSX.Element {
   };
   return (
     <Navbar expand="lg" className="shadow-lg">
+      
       <Container>
         <Navbar.Brand>
           <Link href="/" >
