@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model About {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  aboutTitileOne    String?
+  aboutTitileTow    String?
+  aboutTitileTree   String?
+  aboutTitileFour   String?
+  aboutTitileFive   String?
+  aboutSubTitile    String?
+  aboutsubTitle     String?
+  aboutDetailOne    String?
+  aboutSubDetailOne String?
+  aboutDetailTwo    String?
+  aboutSubDetailTwo String?
+  createdAt         DateTime? @default(now())
+  updatedAt         DateTime? @updatedAt
+  deleted_at        DateTime? @map("deleted_at")
+}
+
+model Contact {
+  id         String    @id @default(auto()) @map("_id") @db.ObjectId
+  Title      String?
+  subTitle   String?
+  Address    String?
+  Tel        String?
+  email      String?
+  OpenTime   String?
+  LinkMaps   String?
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
+  deleted_at DateTime? @map("deleted_at")
+}
+
+model Workout {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  blogTitle   String?
+  Topic       String?
+  Posture     String?
+  ForBurns    String?
+  TimeToDo    String?
+  LinkYouTube String?
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @updatedAt
+  deleted_at  DateTime? @map("deleted_at")
+}
+
+model Products {
+  id                 String    @id @default(auto()) @map("_id") @db.ObjectId
+  productTitle       String?
+  productName        String?
+  productDescription String?
+  productVolume      String?
+  productImage       String?
+  productPrice       String?
+  createdAt          DateTime? @default(now())
+  updatedAt          DateTime? @updatedAt
+  deleted_at         DateTime? @map("deleted_at")
+}
+
+model Blog {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  blogTitle       String?
+  blogsubTitle    String?
+  blogDescription String?
+  blogImage       String?
+  createdAt       DateTime? @default(now())
+  updatedAt       DateTime? @updatedAt
+  deleted_at      DateTime? @map("deleted_at")
+}
+
+model Event {
+  id               String    @id @default(auto()) @map("_id") @db.ObjectId
+  eventTitle       String?
+  eventsubTitle    String?
+  eventDescription String?
+  eventImage       String?
+  StartDate        DateTime?
+  endDate          DateTime?
+  createdAt        DateTime? @default(now())
+  updatedAt        DateTime? @updatedAt
+  deleted_at       DateTime? @map("deleted_at")
+}
