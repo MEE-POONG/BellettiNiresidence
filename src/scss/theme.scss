@@ -132,6 +132,8 @@ strong {
 }
 .navbar {
 	background: var(--white-color);
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 .navbar-brand {
 	color: $color_1;
@@ -253,18 +255,18 @@ strong {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
 }
-// .site-about-header {
-// 	background-image: url('../images/header/briana-tozour-V_Nkf1E-vYA-unsplash.jpg');
-// }
-// .site-menu-header {
-// 	background-image: url('../images/header/luisa-brimble-aFzg83dvnAI-unsplash.jpg');
-// }
-// .site-news-header {
-// 	background-image: url('../images/header/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg');
-// }
-// .site-contact-header {
-// 	background-image: url('../images/header/rod-long-I79Pgmhmy5M-unsplash.jpg');
-// }
+.site-about-header {
+	background-image: url("../images/header/briana-tozour-V_Nkf1E-vYA-unsplash.jpg");
+}
+.site-menu-header {
+	background-image: url("../images/header/luisa-brimble-aFzg83dvnAI-unsplash.jpg");
+}
+.site-news-header {
+	background-image: url("../images/header/priscilla-du-preez-W3SEyZODn8U-unsplash.jpg");
+}
+.site-contact-header {
+	background-image: url("../images/header/rod-long-I79Pgmhmy5M-unsplash.jpg");
+}
 .overlay {
 	background: linear-gradient(to top, var(--dark-color), transparent 100%);
 	position: absolute;
@@ -273,7 +275,7 @@ strong {
 	bottom: 0;
 	left: 0;
 }
-section.hero {
+.hero {
 	position: relative;
 	overflow: hidden;
 	padding-top: 20.542rem;
@@ -453,7 +455,7 @@ section.hero {
 .news-thumb {
 	position: relative;
 	overflow: hidden;
-	> a {
+	>a {
 		display: block;
 		width: 100%;
 		height: 100%;
@@ -553,7 +555,7 @@ section.hero {
 		&::before {
 			content: "";
 			background-color: $background-color_1;
-			// background-image: url('../images/sincerely-media-HoEYgBL_Gcs-unsplash.jpg');
+			background-image: url("../images/sincerely-media-HoEYgBL_Gcs-unsplash.jpg");
 			background-repeat: no-repeat;
 			background-position: top;
 			background-size: cover;
@@ -599,14 +601,14 @@ section.hero {
 	}
 }
 .BgImage {
-	// background-image: url('../images/14-2048x1152.jpg');
+	background-image: url("../images/14-2048x1152.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
 	height: 500px;
 }
 .site-footer {
-	// background-image: url('../images/gallery/710_0003-1024x683.jpg');
+	background-image: url("../images/gallery/710_0003-1024x683.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -727,7 +729,7 @@ section.hero {
 		.modal-content {
 			padding-bottom: 200px;
 			&::before {
-				// background-image: url('../images/sincerely-media-HoEYgBL_Gcs-unsplash-mobile.jpg');
+				background-image: url("../images/sincerely-media-HoEYgBL_Gcs-unsplash-mobile.jpg");
 				background-position: bottom;
 				top: auto;
 				left: 0;
