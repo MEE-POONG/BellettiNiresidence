@@ -32,37 +32,52 @@ export default function NavigationBar(): JSX.Element {
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
         <Navbar.Collapse id="navbarNav">
           <Nav className="mx-auto">
-            <Link href="/" className='nav-item' >
-              <Nav.Link>Home</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/" className='nav-link' >
+                Home
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link href="/residences" className='nav-link' >
+                Residences
+              </Link>
+            </Nav.Item>
 
-            <Link href="/residences" className='nav-item' >
-              <Nav.Link>Residences</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/room_type" className='nav-link' >
+                Room Type
+              </Link>
+            </Nav.Item>
 
-            <Link href="/room_type" className='nav-item' >
-              <Nav.Link>Room Type</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/floor_plans" className='nav-link' >
+                Floor Plans
+              </Link>
+            </Nav.Item>
 
-            <Link href="/floor_plans" className='nav-item' >
-              <Nav.Link>Floor Plans</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/amenities" className='nav-link' >
+                Amenities
+              </Link>
+            </Nav.Item>
 
-            <Link href="/amenities" className='nav-item' >
-              <Nav.Link>Amenities</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/engage" className='nav-link' >
+                Engage
+              </Link>
+            </Nav.Item>
 
-            <Link href="/engage" className='nav-item' >
-              <Nav.Link>Engage</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/inquire" className='nav-link' >
+                Inquire
+              </Link>
+            </Nav.Item>
 
-            <Link href="/inquire" className='nav-item' >
-              <Nav.Link>Inquire</Nav.Link>
-            </Link>
-
-            <Link href="/gallery" className='nav-item' >
-              <Nav.Link>Gallery</Nav.Link>
-            </Link>
+            <Nav.Item>
+              <Link href="/gallery" className='nav-link' >
+                Gallery
+              </Link>
+            </Nav.Item>
           </Nav>
         </Navbar.Collapse>
       </Container>
