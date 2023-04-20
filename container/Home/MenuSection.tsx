@@ -18,17 +18,17 @@ const MenuSection: React.FC = () => {
             <h2 className="text-center mb-lg-5 mb-4">Recommend</h2>
           </Col>
           {[
-            { title: 'Morning Fresh', img: './assets/images/other/1.png', tag: 'Breakfast' },
-            { title: 'Tooplate Soup', img: './assets/images/other/2.jpg', tag: 'Lunch' },
-            { title: 'Premium Steak', img: './assets/images/other/3.jpg', tag: 'Dinner' },
-            { title: 'Seafood Set', img: './assets/images/other/4.jpg', tag: 'Dinner' },
-            { title: 'Burger Set', img: './assets/images/other/5.jpg', tag: 'Breakfast' },
-            { title: 'Healthy Soup', img: './assets/images/other/6.jpg', tag: 'Lunch' },
+            { title: 'Morning Fresh', img: '/images/other/1.png', tag: 'Breakfast' },
+            { title: 'Tooplate Soup', img: '/images/other/2.jpg', tag: 'Lunch' },
+            { title: 'Premium Steak', img: '/images/other/3.jpg', tag: 'Dinner' },
+            { title: 'Seafood Set', img: '/images/other/4.jpg', tag: 'Dinner' },
+            { title: 'Burger Set', img: '/images/other/5.jpg', tag: 'Breakfast' },
+            { title: 'Healthy Soup', img: '/images/other/6.jpg', tag: 'Lunch' },
           ].map((item, index) => (
             <Col lg={4} md={6} xs={12} key={index}>
               <div className="menu-thumb">
                 <div className="menu-image-wrap">
-                  <Image src={item.img} className="menu-image" alt="" />
+                  <Image src={item?.img} className="menu-image" alt="" width={100} height={100}/>
                   <Badge className="menu-tag bg-warning">{item.tag}</Badge>
                 </div>
                 <div className="menu-info d-flex flex-wrap align-items-center">

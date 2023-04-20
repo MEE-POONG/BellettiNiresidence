@@ -2,12 +2,9 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroSection from '@/container/Home/HeroSection';
-import AboutSection from '@/container/Home/AboutSection';
-import ArtistsSection from '@/container/Home/WorkOutSection';
-import ScheduleSection from '@/container/Home/BlogEventSection';
-import ContactSection from '@/container/Home/ContactSection';
-import PricingSection from '@/container/Home/PricingSection';
-import SteviaSection from '@/container/Home/SteviaSection';
+import MenuSection from '@/container/Home/MenuSection';
+import NewsSection from "@/container/Home/NewsSection";
+
 
 export default function HomePage(): JSX.Element {
   const [srcollBG, setSrcollBG] = useState<number>(0);
@@ -33,8 +30,9 @@ export default function HomePage(): JSX.Element {
       </Head>
       <div className='home-page'>
         <HeroSection />
+        <MenuSection />
+        <NewsSection />
         {/* <SteviaSection id={''} translateX={0} translateY={srcollBG} />
-        <PricingSection />
         <AboutSection />
         <ArtistsSection />
         <ScheduleSection/>

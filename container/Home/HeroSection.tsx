@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
             <Carousel fade>
               <Carousel.Item>
                 <div className="carousel-image-wrap">
-                  <img src="./assets/images/condo_slide/710_0003-1024x683.jpg" className="img-fluid carousel-image" alt="" />
+                  <img src="/images/condo_slide/710_0003-1024x683.jpg" className="img-fluid carousel-image" alt="" />
                 </div>
                 <Carousel.Caption>
                   <h4 className="hero-text">Type A</h4>
@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
               </Carousel.Item>
               <Carousel.Item>
                 <div className="carousel-image-wrap">
-                  <img src="./assets/images/condo_slide/710_0025-1024x683.jpg" className="img-fluid carousel-image" alt="" />
+                  <img src="/images/condo_slide/710_0025-1024x683.jpg" className="img-fluid carousel-image" alt="" />
                 </div>
                 <Carousel.Caption>
                   <div className="d-flex align-items-center">
@@ -40,7 +40,7 @@ const HeroSection: React.FC = () => {
               </Carousel.Item>
               <Carousel.Item>
                 <div className="carousel-image-wrap">
-                  <img src="./assets/images/condo_slide/710_0027-1024x704.jpg" className="img-fluid carousel-image" alt="" />
+                  <img src="/images/condo_slide/710_0027-1024x704.jpg" className="img-fluid carousel-image" alt="" />
                 </div>
                 <Carousel.Caption>
                   <div className="d-flex align-items-center">
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
       </Container>
       <div className="video-wrap">
         <video autoPlay loop muted className="custom-video" poster="">
-          <source src="./assets/video/production_ID_3769033.mp4" type="video/mp4" />
+          <source src="/video/production_ID_3769033.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
