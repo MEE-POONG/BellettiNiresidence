@@ -28,7 +28,7 @@ export default function NavigationBar(): JSX.Element {
       className="py-lg-0 px-4 px-lg-5"
     >
       <Container>
-        <Navbar.Brand href="index.html" className="d-block d-lg-none">
+        <Navbar.Brand href="/" className="d-block d-lg-none">
           <h1 className="text-primary">Photozone</h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarCollapse">
@@ -36,13 +36,13 @@ export default function NavigationBar(): JSX.Element {
         </Navbar.Toggle>
         <Navbar.Collapse id="navbarCollapse" className="justify-content-between py-4 py-lg-0">
           <Nav className="ms-auto py-0">
-            <Nav.Link href="index.html" className="active">
+            <Nav.Link href="/" className="active">
               Home
             </Nav.Link>
-            <Nav.Link href="about.html">About</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="service.html">Services</Nav.Link>
           </Nav>
-          <Navbar.Brand href="index.html" className="bg-primary py-2 px-4 mx-3 d-none d-lg-block">
+          <Navbar.Brand href="/" className="bg-primary py-2 px-4 mx-3 d-none d-lg-block">
             <h1 className="text-white">Photozone</h1>
           </Navbar.Brand>
           <Nav className="me-auto py-0">
