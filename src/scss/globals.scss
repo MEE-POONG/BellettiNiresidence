@@ -1,9 +1,29 @@
-@import 'bootstrap/dist/css/bootstrap.min.css';
+$primary: #6244c5;
+$secondary: #ffc448;
+$light: #fafafb;
+$dark: #12141d;
 
-@import "aos/dist/aos.css";
+$font-family-base: "Open Sans", sans-serif;
 
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+$body-color: #5a5a5a;
 
+$headings-color: $dark;
+
+$headings-font-weight: 600;
+
+$display-font-weight: 700;
+
+$enable-responsive-font-sizes: true;
+
+$border-radius: 10px;
+
+$border-radius-sm: $border-radius;
+
+$border-radius-lg: $border-radius;
+
+$link-decoration: none;
+
+$enable-negative-margins: true;
+
+@import "bootstrap/dist/css/bootstrap.min.css";
 @import "theme/index.scss";
-@import "style.scss";

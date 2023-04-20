@@ -4,7 +4,7 @@ import type { AppProps } from 'next/app'
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { SSRProvider } from "react-bootstrap";
-import '../scss/globals.css'
+import '../scss/globals.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
