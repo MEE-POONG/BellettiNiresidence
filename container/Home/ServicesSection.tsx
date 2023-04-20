@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -18,9 +19,9 @@ const ServicesSection: React.FC<OurServicesProps> = () => {
                 <div className="position-relative">
                   <img className="img-fluid" src={`images/service-${index + 1}.jpg`} alt="" />
                   <div className="service-overlay">
-                    <a className="btn btn-lg-square btn-outline-light rounded-circle" href="">
+                    <Link className="btn btn-lg-square btn-outline-light rounded-circle" href="/">
                       <i className="fa fa-link text-primary"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="text-center p-4">

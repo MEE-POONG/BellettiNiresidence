@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container, Row, Col, Button, InputGroup, FormControl } from 'react-bootstrap';
 
@@ -10,9 +11,9 @@ const Footer: React.FC = () => {
       <Container fluid className="position-relative bg-dark text-white-50 mt-5 py-5 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
         <Row className="g-5 py-5">
           <Col lg={6} className="pe-lg-5">
-            <a href="index.html" className="navbar-brand">
+            <Link href="/" className="navbar-brand">
               <h1 className="display-5 text-primary">Photozone</h1>
-            </a>
+            </Link>
             <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
             {/* <p><FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />123 Street, New York, USA</p> */}
             {/* <p><FontAwesomeIcon icon={faPhoneAlt} className="me-2" />+012 345 67890</p> */}

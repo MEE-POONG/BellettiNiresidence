@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -64,9 +65,9 @@ const TeamSection: React.FC<OurTeamProps> = () => {
                     Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
                   </p>
                   <div className="d-flex">
-                    <a className="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i className="fab fa-facebook-f"></i></a>
-                    <a className="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i className="fab fa-twitter"></i></a>
-                    <a className="btn btn-square btn-outline-primary rounded-circle me-2" href=""><i className="fab fa-instagram"></i></a>
+                    <Link className="btn btn-square btn-outline-primary rounded-circle me-2" href="/"><i className="fab fa-facebook-f"></i></Link>
+                    <Link className="btn btn-square btn-outline-primary rounded-circle me-2" href="/"><i className="fab fa-twitter"></i></Link>
+                    <Link className="btn btn-square btn-outline-primary rounded-circle me-2" href="/"><i className="fab fa-instagram"></i></Link>
                   </div>
                 </div>
               </Col>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -30,9 +31,9 @@ const WorkSection: React.FC<OurWorksProps> = () => {
                   <Col key={projectIndex} xs={12}>
                     <div className="project-item">
                       <img className="img-fluid" src={`images/project-${imgIndex}.jpg`} alt="" />
-                      <a className="project-title h5 mb-0" href={`images/project-${imgIndex}.jpg`} data-lightbox="project">
+                      <Link className="project-title h5 mb-0" href={`images/project-${imgIndex}.jpg`} data-lightbox="project">
                         {title}
-                      </a>
+                      </Link>
                     </div>
                   </Col>
                 ))}
