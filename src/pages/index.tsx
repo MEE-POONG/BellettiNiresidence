@@ -2,8 +2,12 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroSection from '@/container/Home/HeroSection';
-import MenuSection from '@/container/Home/MenuSection';
-import NewsSection from "@/container/Home/NewsSection";
+import AboutUsSection from "@/container/Home/AboutUsSection";
+import WhySection from "@/container/Home/WhySection";
+import ServicesSection from "@/container/Home/ServicesSection";
+import WorkSection from "@/container/Home/WorkSection";
+import TeamSection from "@/container/Home/TeamSection";
+import ClientsReview from "@/container/Home/ClientsReviewSection";
 
 
 export default function HomePage(): JSX.Element {
@@ -30,13 +34,12 @@ export default function HomePage(): JSX.Element {
       </Head>
       <div className='home-page'>
         <HeroSection />
-        <MenuSection />
-        <NewsSection />
-        {/* <SteviaSection id={''} translateX={0} translateY={srcollBG} />
-        <AboutSection />
-        <ArtistsSection />
-        <ScheduleSection/>
-        <ContactSection /> */}
+        <AboutUsSection />
+        <WhySection />
+        <ServicesSection />
+        <WorkSection />
+        <TeamSection />
+        <ClientsReview />
       </div>
     </LayOut>
   );

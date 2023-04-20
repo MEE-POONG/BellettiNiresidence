@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
-import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import { Container, Row, Col, Carousel, Button, Image } from 'react-bootstrap';
 
 const HeroSection: React.FC = () => {
   useEffect(() => {
@@ -10,56 +10,42 @@ const HeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="hero">
-      <Container>
-        <Row>
-          <Col lg={5} xs={12} className="m-auto">
-            <div className="heroText">
-              <h1 className="text-white mb-lg-5 mb-3">Bellettini Residence</h1>
+    <Container fluid className="hero-header bg-light py-5 mb-5">
+      <Container className="py-5">
+        <Row className="g-5 align-items-center">
+          <Col lg={6}>
+            <p className="text-primary text-uppercase mb-2 animated slideInDown">Welcome To Photozone</p>
+            <h1 className="display-4 mb-3 animated slideInDown">Wedding And Portrait Studio Based in New York</h1>
+            <p className="animated slideInDown">
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
+              ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+            </p>
+            <div className="d-flex align-items-center pt-4 animated slideInDown">
+              <Button href="" className="btn-primary py-3 px-4 me-5">
+                Explore More
+              </Button>
+              {/* You may need to modify this button to work with React-Bootstrap's Modal component */}
+              <button type="button" className="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                <span></span>
+              </button>
+              <h5 className="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
             </div>
           </Col>
-          <Col lg={7} xs={12}>
-            <Carousel fade>
-              <Carousel.Item>
-                <div className="carousel-image-wrap">
-                  <img src="/images/condo_slide/710_0003-1024x683.jpg" className="img-fluid carousel-image" alt="" />
-                </div>
-                <Carousel.Caption>
-                  <h4 className="hero-text">Type A</h4>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-image-wrap">
-                  <img src="/images/condo_slide/710_0025-1024x683.jpg" className="img-fluid carousel-image" alt="" />
-                </div>
-                <Carousel.Caption>
-                  <div className="d-flex align-items-center">
-                    <h4 className="hero-text">Type B</h4>
-                  </div>
-                </Carousel.Caption>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className="carousel-image-wrap">
-                  <img src="/images/condo_slide/710_0027-1024x704.jpg" className="img-fluid carousel-image" alt="" />
-                </div>
-                <Carousel.Caption>
-                  <div className="d-flex align-items-center">
-                    <h4 className="hero-text">Type C</h4>
-                  </div>
-                </Carousel.Caption>
-              </Carousel.Item>
-            </Carousel>
+          <Col lg={6} className="animated fadeIn">
+            <Row className="g-3">
+              <Col xs={6} className="text-end">
+                <Image className="img-fluid bg-white p-3 w-100 mb-3" src="images/hero-1.jpg" alt="" />
+                <img className="img-fluid bg-white p-3 w-50" src="images/hero-3.jpg" alt="" />
+              </Col>
+              <Col xs={6}>
+                <img className="img-fluid bg-white p-3 w-50 mb-3" src="images/hero-4.jpg" alt="" />
+                <img className="img-fluid bg-white p-3 w-100" src="images/hero-2.jpg" alt="" />
+              </Col>
+            </Row>
           </Col>
         </Row>
       </Container>
-      <div className="video-wrap">
-        <video autoPlay loop muted className="custom-video" poster="">
-          <source src="/video/production_ID_3769033.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-      <div className="overlay"></div>
-    </section>
+    </Container>
   );
 };
 
