@@ -40,32 +40,38 @@ export default function NavigationBar(): JSX.Element {
           <Offcanvas.Header closeButton>
             <Image src="images/logo.png" alt="logo" className='logo-nav' />
           </Offcanvas.Header>
-          <Offcanvas.Body bsPrefix='navbar-nav'>
+          <Offcanvas.Body bsPrefix='navbar-nav ms-auto'>
             <Nav className="f-f-domine">
               <Link href="/" className="nav-link active">
-                THE BUILDING
+                Wellcome
+                <p></p>
               </Link>
               <Link href="/residences" className="nav-link">
                 RESIDENCES
+                {/* <p>ที่พักอาศัย</p> */}
               </Link>
               <Link href="/roomtype" className="nav-link">
                 ROOMTYPE
+                {/* <p>ประเภทห้อง</p> */}
               </Link>
               <Link href="/floorplan" className="nav-link">
                 FLOOR PLANS
+                {/* <p>แผนผังชั้น</p> */}
               </Link>
               <Link href="/amenities" className="nav-link">
                 AMENITIES
+                {/* <p>สิ่งอำนวยความสะดวก</p> */}
               </Link>
               {/* <Link href="/engage" className="nav-link">
               ENGAGE
             </Link> */}
               <Link href="/inquire" className="nav-link">
                 INQUIRE
+                {/* <p>สอบถาม</p> */}
               </Link>
-              <Link href="/gallery" className="nav-link">
+              {/* <Link href="/gallery" className="nav-link">
                 GALLERY
-              </Link>
+              </Link> */}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>

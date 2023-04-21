@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-interface AboutUsProps {}
+interface AboutUsProps { }
 
 const AboutUsSection: React.FC<AboutUsProps> = () => {
   return (
@@ -20,31 +20,29 @@ const AboutUsSection: React.FC<AboutUsProps> = () => {
           </Col>
           <Col lg={6} className="wow fadeInUp" data-wow-delay="0.5s">
             <div className="h-100">
-              <p className="text-primary text-uppercase mb-2">About Us</p>
-              <h1 className="display-6 mb-4">We Are Creative And Professional Photographer</h1>
+              <p className="text-primary text-uppercase mb-2">Request a Call Back?</p>
+              <h3 className="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradise</h3>
               <p>
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                The residences welcome you home with spacious living areas, attentive design detail, contemporary appointments and views spanning the Cascades to Lake Washington.
               </p>
               <p>
-                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat
-                ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
+                The residences welcome you home with spacious living areas, attentive design detail, contemporary appointments and views spanning the Cascades to Lake Washington.
               </p>
               <Row className="g-2 mb-4">
                 <Col sm={6}>
-                  <i className="fa fa-check text-primary me-3"></i>Quality Products
+                  <i className="fa fa-check text-primary me-3"></i>Quality Room
                 </Col>
                 <Col sm={6}>
-                  <i className="fa fa-check text-primary me-3"></i>Custom Products
+                  <i className="fa fa-check text-primary me-3"></i>Custom Room
                 </Col>
                 <Col sm={6}>
-                  <i className="fa fa-check text-primary me-3"></i>Online Order
+                  <i className="fa fa-check text-primary me-3"></i>Privacy
                 </Col>
                 <Col sm={6}>
-                  <i className="fa fa-check text-primary me-3"></i>Home Delivery
+                  <i className="fa fa-check text-primary me-3"></i>Good Service
                 </Col>
               </Row>
-              <Button className="btn-primary py-3 px-5" href="">
+              <Button className="btn-primary py-3 px-5" href="/inquire">
                 Read More
               </Button>
             </div>
