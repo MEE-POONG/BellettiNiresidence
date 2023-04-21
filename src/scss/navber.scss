@@ -1,0 +1,39 @@
+.navbar,
+.offcanvas {
+    .navbar-brand {
+        img {
+            max-height: 120px;
+        }
+    }
+    .navbar-nav {
+        .nav-link {
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width: 1200px) and (min-width: 769px) {
+        padding: 0;
+        margin: 0;
+        .navbar-brand {
+            img {
+                max-height: 90px;
+            }
+        }
+        .navbar-nav {
+            .nav-link {
+                font-size: 16px;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        .navbar-nav {
+            .nav-link {
+                padding-top: 0;
+                margin-top: 0;
+            }
+        }
+        .logo-nav,
+        .logo {
+            height: 90px;
+        }
+    }
+}

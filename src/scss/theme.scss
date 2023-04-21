@@ -1,12 +1,12 @@
-$color_1: #FFFFFF;
+$color_1: #ffffff;
 $color_2: var(--dark);
 $color_3: var(--primary);
 $color_4: var(--secondary);
 $color_5: var(--light);
-$color_6: rgba(255, 255, 255, .5);
-$border-color_1: transparent transparent #FFFFFF transparent;
-$border-color_2: transparent #FFFFFF transparent transparent;
-$border-color_3: transparent transparent transparent #FFFFFF;
+$color_6: rgba(255, 255, 255, 0.5);
+$border-color_1: transparent transparent #ffffff transparent;
+$border-color_2: transparent #ffffff transparent transparent;
+$border-color_3: transparent transparent transparent #ffffff;
 
 /********** Template CSS **********/
 /*** Spinner ***/
@@ -31,9 +31,9 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 /*** Testimonial ***/
 /*** Footer ***/
 :root {
-	--primary: #EAA636;
+	--primary: #eaa636;
 	--secondary: #545454;
-	--light: #FDF5EB;
+	--light: #fdf5eb;
 	--dark: #925c18;
 }
 .back-to-top {
@@ -46,17 +46,17 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 #spinner {
 	opacity: 0;
 	visibility: hidden;
-	transition: opacity .5s ease-out, visibility 0s linear .5s;
+	transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
 	z-index: 99999;
 }
 #spinner.show {
-	transition: opacity .5s ease-out, visibility 0s linear 0s;
+	transition: opacity 0.5s ease-out, visibility 0s linear 0s;
 	visibility: visible;
 	opacity: 1;
 }
 .btn {
 	font-weight: 500;
-	transition: .5s;
+	transition: 0.5s;
 }
 .btn.btn-primary {
 	color: $color_1;
@@ -90,9 +90,10 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 }
 .navbar.fixed-top {
 	display: none;
-	transition: .5s;
+	transition: 0.5s;
 }
-.navbar {
+.navbar,
+.offcanvas {
 	.navbar-nav {
 		.nav-link {
 			padding: 20px 15px;
@@ -100,6 +101,9 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 			font-size: 18px;
 			font-weight: 600;
 			outline: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			&:hover {
 				color: $color_3;
 			}
@@ -164,7 +168,7 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 		width: 0;
 		height: 0;
 		left: -1px;
-		border-left: 16px solid #FFFFFF;
+		border-left: 16px solid #ffffff;
 		border-top: 11px solid transparent;
 		border-bottom: 11px solid transparent;
 	}
@@ -194,18 +198,18 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 	}
 }
 .hero-header {
-	.breadcrumb-item+.breadcrumb-item {
+	.breadcrumb-item + .breadcrumb-item {
 		&::before {
 			color: $color_4;
 		}
 	}
 }
 .fact-item {
-	transition: .3s;
+	transition: 0.3s;
 	&:hover {
 		margin-top: -10px;
-		background: #FFFFFF !important;
-		box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+		background: #ffffff !important;
+		box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
 	}
 }
 .img-twice {
@@ -221,9 +225,9 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 	}
 }
 .service-item {
-	transition: .3s;
+	transition: 0.3s;
 	* {
-		transition: .3s;
+		transition: 0.3s;
 	}
 	&:hover {
 		margin-top: -10px;
@@ -244,10 +248,10 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: rgba(0, 0, 0, .5);
+		background: rgba(0, 0, 0, 0.5);
 		overflow: hidden;
 		opacity: 0;
-		transition: .5s;
+		transition: 0.5s;
 	}
 }
 .project-item {
@@ -260,8 +264,8 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 		left: 1rem;
 		padding: 1rem;
 		text-align: center;
-		background: #FFFFFF;
-		transition: .5s;
+		background: #ffffff;
+		transition: 0.5s;
 	}
 	&:hover {
 		.project-title {
@@ -290,9 +294,9 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 				width: 60px;
 				height: 60px;
 			}
-			transition: .5s;
+			transition: 0.5s;
 			* {
-				transition: .5s;
+				transition: 0.5s;
 			}
 		}
 	}
@@ -319,7 +323,7 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 			font-size: 22px;
 			color: $color_5;
 			background: var(--primary);
-			transition: .5s;
+			transition: 0.5s;
 			&:hover {
 				color: $color_3;
 				background: var(--dark);
@@ -336,7 +340,7 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 			font-size: 22px;
 			color: $color_5;
 			background: var(--primary);
-			transition: .5s;
+			transition: 0.5s;
 			&:hover {
 				color: $color_3;
 				background: var(--dark);
@@ -365,7 +369,7 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 		color: $color_6;
 		font-weight: normal;
 		text-transform: capitalize;
-		transition: .3s;
+		transition: 0.3s;
 		&::before {
 			position: relative;
 			content: "\f105";
@@ -400,13 +404,13 @@ $border-color_3: transparent transparent transparent #FFFFFF;
 				right: 15px;
 				opacity: 0;
 				visibility: hidden;
-				transition: .5s;
+				transition: 0.5s;
 			}
 			&:hover {
 				.dropdown-menu {
 					top: 100%;
 					visibility: visible;
-					transition: .5s;
+					transition: 0.5s;
 					opacity: 1;
 				}
 			}

@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'Domine';
-    src: url('/fonts/Domine/Domine-VariableFont_wght.ttf') format('truetype');
+    font-family: "Domine";
+    src: url("/fonts/Domine/Domine-VariableFont_wght.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-  }
+}
 
 @font-face {
     font-family: "Domine";
@@ -50,11 +50,7 @@
 .bg-light {
     background-color: #fdf5eb !important;
 }
-.navbar-brand {
-    img {
-        height: 120px;
-    }
-}
+
 .btn-primary {
     color: #000;
     background-color: #eaa636;
@@ -65,4 +61,13 @@
 }
 a {
     text-decoration: none;
+}
+.right-0 {
+    right: 0;
+}
+.logo-nav{
+ height: 120px;
+}
+.overflowX-auto{
+    overflow-x: auto;
 }
