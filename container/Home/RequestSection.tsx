@@ -1,9 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
-interface AboutUsProps { }
+interface RequestProps { }
 
-const AboutUsSection: React.FC<AboutUsProps> = () => {
+const RequestSection: React.FC<RequestProps> = () => {
   return (
     <Container fluid className="container-xxl py-5">
       <Container>
@@ -11,10 +11,10 @@ const AboutUsSection: React.FC<AboutUsProps> = () => {
           <Col lg={6} className="wow fadeInUp" data-wow-delay="0.1s">
             <Row className="g-3 img-twice position-relative h-100">
               <Col xs={6}>
-                <img className="img-fluid bg-light p-3" src="images/about-1.jpg" alt="" />
+                <img className="img-fluid bg-light p-3" src="images/requset-1.jpg" alt="" />
               </Col>
               <Col xs={6} className="align-self-end">
-                <img className="img-fluid bg-light p-3" src="images/about-2.jpg" alt="" />
+                <img className="img-fluid bg-light p-3" src="images/requse-2.jpg" alt="" />
               </Col>
             </Row>
           </Col>
@@ -53,4 +53,4 @@ const AboutUsSection: React.FC<AboutUsProps> = () => {
   );
 };
 
-export default AboutUsSection;
+export default RequestSection;
