@@ -95,3 +95,18 @@ a {
 .overflowX-auto {
     overflow-x: auto;
 }
+.bg-filter {
+    background-color: rgba(3, 8, 36, 0.74);
+    opacity: 0.5;
+    transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+.score {
+    position: relative;
+    z-index: 99;
+}
