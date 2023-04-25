@@ -38,8 +38,8 @@ export default function HomePage(): JSX.Element {
         <WhySection />
         <ServicesSection />
         <WorkSection />
-        <TeamSection />
-        <ClientsReview />
+        {/* <TeamSection /> */}
+        {/* <ClientsReview /> */}
       </div>
     </LayOut>
   );

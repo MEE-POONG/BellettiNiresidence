@@ -1,54 +1,67 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaUserNurse } from "react-icons/fa";
+import { Parallax } from 'react-parallax';
 
-interface WhyChooseUsProps {}
+interface GoodResponseUsProps { }
 
-const WhySection: React.FC<WhyChooseUsProps> = () => {
+const GoodResponseSection: React.FC<GoodResponseUsProps> = () => {
   return (
-    <Container fluid className="container-xxl py-5">
-      <Container>
-        <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '500px' }}>
-          <p className="text-primary text-uppercase mb-2">Why Choose Us!</p>
-          <h1 className="display-6 mb-5">The Leading Photo Studio In The Country</h1>
+    <div className='good-response-page'>
+      <Parallax
+        bgImage="./images/hero-4.jpg"
+        strength={500}
+      >
+        <div className='bg-filter' />
+        <div className='score py-5'>
+          <Container>
+            <Row className="g-3">
+              <Col lg={3} md={6}  >
+                <div className="fact-item text-center h-100 p-5">
+                  <h1 className="display-6 text-white mb-3">
+                    <FaUserNurse />
+                    <br />
+                    165,489
+                  </h1>
+                  <h4 className="mb-3 text-white">Support Given</h4>
+                </div>
+              </Col>
+              <Col lg={3} md={6} >
+                <div className="fact-item text-center h-100 p-5">
+                  <h1 className="display-6 text-white mb-3">
+                    <FaUserNurse />
+                    <br />
+                    254 +
+                  </h1>
+                  <h4 className="mb-3 text-white">Clients Rating</h4>
+                </div>
+              </Col>
+              <Col lg={3} md={6} data-wow-delay="0.5s">
+                <div className="fact-item text-center h-100 p-5">
+                  <h1 className="display-6 text-white mb-3">
+                    <FaUserNurse />
+                    <br />
+                    2 M+
+                  </h1>
+                  <h4 className="mb-3 text-white">Money Saved</h4>
+                </div>
+              </Col>
+              <Col lg={3} md={6} data-wow-delay="0.5s">
+                <div className="fact-item text-center h-100 p-5">
+                  <h1 className="display-6 text-white mb-3">
+                    <FaUserNurse />
+                    <br />
+                    578
+                  </h1>
+                  <h4 className="mb-3 text-white">Awards won</h4>
+                </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
-        <Row className="g-3">
-          <Col lg={4} md={6} className="pt-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-            <div className="fact-item bg-light text-center h-100 p-5">
-              <h1 className="display-2 text-primary mb-3" data-toggle="counter-up">
-                35
-              </h1>
-              <h4 className="mb-3">Award Winning</h4>
-              <span>
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
-              </span>
-            </div>
-          </Col>
-          <Col lg={4} md={6} className="wow fadeInUp" data-wow-delay="0.3s">
-            <div className="fact-item bg-light text-center h-100 p-5">
-              <h1 className="display-2 text-primary mb-3" data-toggle="counter-up">
-                45
-              </h1>
-              <h4 className="mb-3">Years Experience</h4>
-              <span>
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
-              </span>
-            </div>
-          </Col>
-          <Col lg={4} md={6} className="pt-lg-5 wow fadeInUp" data-wow-delay="0.5s">
-            <div className="fact-item bg-light text-center h-100 p-5">
-              <h1 className="display-2 text-primary mb-3" data-toggle="counter-up">
-                12345
-              </h1>
-              <h4 className="mb-3">Happy Clients</h4>
-              <span>
-                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
-              </span>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+      </Parallax>
+    </div>
   );
 };
 
-export default WhySection;
+export default GoodResponseSection;
