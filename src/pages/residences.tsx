@@ -8,6 +8,7 @@ import ServicesSection from "@/container/Home/ServicesSection";
 import WorkSection from "@/container/Home/GallerySection";
 import TeamSection from "@/container/Home/TeamSection";
 import ClientsReview from "@/container/Home/ClientsReviewSection";
+import HeroAll from "@/container/HeroAll";
 
 
 export default function ResidencesPage(): JSX.Element {
@@ -33,6 +34,7 @@ export default function ResidencesPage(): JSX.Element {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='residences-page'>
+                <HeroAll />
             </div>
         </LayOut>
     );
