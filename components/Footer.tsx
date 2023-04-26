@@ -30,11 +30,11 @@ const Footer: React.FC = () => {
           </Col>
           <Col lg={4} className="ps-lg-5 text-backblue">
             <h4 className=" mb-4">Quick Links</h4>
-            <Button variant="text-backblue" className="p-0"><FaArrowRight /> About Us</Button><br />
-            <Button variant="text-backblue" className="p-0"><FaArrowRight /> Contact Us</Button><br />
-            <Button variant="text-backblue" className="p-0"><FaArrowRight /> Our Services</Button><br />
-            <Button variant="text-backblue" className="p-0"><FaArrowRight /> Terms & Condition</Button><br />
-            <Button variant="text-backblue" className="p-0"><FaArrowRight /> Terms & Condition</Button><br />
+            <Button variant="text-backblue" className="p-0 font-bold"><FaArrowRight /> About Us</Button><br />
+            <Button variant="text-backblue" className="p-0 font-bold"><FaArrowRight /> Contact Us</Button><br />
+            <Button variant="text-backblue" className="p-0 font-bold"><FaArrowRight /> Our Services</Button><br />
+            <Button variant="text-backblue" className="p-0 font-bold"><FaArrowRight /> Terms & Condition</Button><br />
+            <Button variant="text-backblue" className="p-0 font-bold"><FaArrowRight /> Terms & Condition</Button><br />
           </Col>
         </Row>
       </Container>
