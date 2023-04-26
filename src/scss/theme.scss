@@ -31,10 +31,13 @@ $border-color_3: transparent transparent transparent #ffffff;
 /*** Testimonial ***/
 /*** Footer ***/
 :root {
-	--primary: #eaa636;
+	--primary: #3694ea;
 	--secondary: #545454;
-	--light: #fdf5eb;
-	--dark: #925c18;
+	--light: #ebf8fd;
+	--dark: #113f6e;
+}
+.bg-white {
+	background-color: #eaf8fd !important;
 }
 .back-to-top {
 	position: fixed;

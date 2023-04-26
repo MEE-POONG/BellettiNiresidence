@@ -65,20 +65,24 @@ body {
     font-family: "Roboto Slab", serif;
 }
 .bg-light {
-    background-color: #fdf5eb !important;
+    background-color: #ebf8fd !important;
 }
 
 .btn-primary {
     color: #000;
-    background-color: #eaa636;
-    border-color: #eaa636;
+    background-color: #3694ea;
+    border-color: #3694ea;
     &:hover {
         background-color: var(--dark);
         border-color: var(--dark);
     }
 }
+.text-backblue {
+    color: var(--dark);
+    font-weight: bold;
+}
 .text-primary {
-    color: #eaa636 !important;
+    color: #3694ea !important;
 }
 .text-white {
     color: white !important;

@@ -25,7 +25,7 @@ const HeroSection: React.FC = () => {
         <Container className="py-5 score">
           <Row className="g-5 align-items-center">
             <Col lg={6}>
-              <p className="text-primary text-uppercase mb-2 animated slideInDown">Bellettini Residence</p>
+              <p className="text-backblue text-uppercase mb-2 animated slideInDown">Bellettini Residence</p>
               <h1 className="display-4 mb-3 animated slideInDown text-white">Bellettini Residence</h1>
               <p className="animated slideInDown text-white">
                 An unprecedented approach, bellettiniresidence glass façade has been cut in a playful rhythm around the building to create a captivating visual point in the skyline with a multitude of open spaces for uninterrupted views of the natural surroundings.

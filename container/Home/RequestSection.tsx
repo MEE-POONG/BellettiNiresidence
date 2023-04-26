@@ -1,18 +1,40 @@
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import Slider from 'react-slick';
 
 interface RequestProps { }
 
 const RequestSection: React.FC<RequestProps> = () => {
+  const settings = {
+    dots: false,
+    fade: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    nextArrow: <div className='d-none' />,
+    prevArrow: <div className='d-none' />
+  };
   return (
     <div className='request'>
       <Container className="container-xxl py-5">
-        <p className="text-primary text-uppercase mb-2 d-lg-none d-md-none text-center">Request a Call Back?</p>
+        <p className="text-backblue text-uppercase mb-2 d-lg-none d-md-none text-center">Request a Call Back?</p>
         <Row className="g-5">
           <Col lg={8} md={6}>
             <div className='g-3 img-twice position-relative h-100'>
-              <img className="img-fluid bg-light p-3" src="images/request-1.jpg" alt="" />
-              <img className="img-fluid bg-light p-3" src="images/request-2.jpg" alt="" />
+              <div className="img-fluid bg-light p-3">
+                <Slider {...settings}>
+                  <img src="images/request-1.jpg" alt="" />
+                  <img src="images/request-1.jpg" alt="" />
+                </Slider>
+              </div>
+              <div className="img-fluid bg-light p-3">
+                <Slider {...settings}>
+                  <img src="images/request-1.jpg" alt="" />
+                  <img src="images/request-1.jpg" alt="" />
+                </Slider>
+              </div>
             </div>
           </Col>
           <Col lg={4} md={6}>
