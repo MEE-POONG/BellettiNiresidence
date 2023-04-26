@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroSection from '@/container/Home/HeroSection';
-import AboutUsSection from "@/container/Home/RequestSection";
+import RequestSection from "@/container/Home/RequestSection";
 import WhySection from "@/container/Home/WhySection";
 import ServicesSection from "@/container/Home/ServicesSection";
-import WorkSection from "@/container/Home/WorkSection";
+import WorkSection from "@/container/Home/GallerySection";
 import TeamSection from "@/container/Home/TeamSection";
 import ClientsReview from "@/container/Home/ClientsReviewSection";
 
@@ -34,7 +34,7 @@ export default function HomePage(): JSX.Element {
       </Head>
       <div className='home-page'>
         <HeroSection />
-        <AboutUsSection />
+        <RequestSection />
         <WhySection />
         <ServicesSection />
         <WorkSection />

@@ -6,14 +6,14 @@ interface OurServicesProps { }
 
 const ServicesSection: React.FC<OurServicesProps> = () => {
   return (
-    <Container fluid className="container-xxl bg-light py-5 my-5">
-      <Container className="py-5">
-        <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '500px' }}>
+          <Container fluid className="container-xxl bg-light py-5 my-5">
+            <Container className="py-5">
+              <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '500px' }}>
           <p className="text-primary text-uppercase mb-2">Our Services</p>
-          <h1 className="display-6 mb-4">We Provide Best Professional Services</h1>
+          <h1 className="display-6 mb-4 text-backblue">We Provide Best Professional Services</h1>
         </div>
         <Row className="g-3">
-          {['Weddings', 'Portraits', 'Fashion', 'Editorial'].map((service, index) => (
+          {['Hospitality', 'Clean a Room', 'Food', 'Association'].map((service, index) => (
             <Col key={index} lg={3} md={6} className={`wow fadeInUp${index % 2 !== 0 ? ' pt-lg-5' : ''}`} data-wow-delay={`${0.1 + 0.2 * index}s`}>
               <div className="service-item d-flex flex-column bg-white p-3 pb-0">
                 <div className="position-relative">
