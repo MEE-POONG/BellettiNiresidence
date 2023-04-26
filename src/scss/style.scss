@@ -80,6 +80,15 @@ body {
 .text-backblue {
     color: var(--dark);
     font-weight: bold;
+    text-decoration: none;
+}
+.btn-text-backblue:hover {
+    color: #3694ea;
+}
+.btn.text-backblue:hover {
+    background-color: unset;
+    color: #3694ea;
+    border-color: unset;
 }
 .text-primary {
     color: #3694ea !important;
