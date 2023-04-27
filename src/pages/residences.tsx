@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
+import DesignSection from "@/container/Residences/DesignSection";
+import LocationAll from "@/container/LocationAll";
 
 type HeroAllProps = {
     name: string;
@@ -31,7 +33,9 @@ const ResidencesPage: React.FC<HeroAllProps> = ({ page }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='residences-page'>
-                <HeroAll name="" page="residences" path="" />
+                <HeroAll name="Residences" page="Residences" path="residences" />
+                <DesignSection />
+                <LocationAll />
             </div>
         </LayOut>
     );
