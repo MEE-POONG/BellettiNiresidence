@@ -5,16 +5,6 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 interface OurGalleryProps { }
 
 const DesignSection: React.FC<OurGalleryProps> = () => {
-  const projects = [
-    ['Memory', 5],
-    ['Wedding', 2],
-    ['Portrait', 1],
-    ['Travel', 6],
-    ['Wedding', 7],
-    ['Memory', 3],
-    ['Fashion', 4],
-    ['Portrait', 8],
-  ];
 
   return (
     <div className=" design-section">
