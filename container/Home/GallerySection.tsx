@@ -17,7 +17,7 @@ const Galleryection: React.FC<OurGalleryProps> = () => {
   ];
 
   return (
-    <Container fluid className="container-xxl py-5">
+    <Container fluid className="container-xxl py-5 gallery-list">
       <Container>
         <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '500px' }}>
           <p className="text-primary text-uppercase mb-2">Our Gallery</p>

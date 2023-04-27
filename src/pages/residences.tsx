@@ -1,17 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
-import HeroSection from '@/container/Home/HeroSection';
-import RequestSection from "@/container/Home/RequestSection";
-import WhySection from "@/container/Home/WhySection";
-import ServicesSection from "@/container/Home/ServicesSection";
-import WorkSection from "@/container/Home/GallerySection";
-import TeamSection from "@/container/Home/TeamSection";
-import ClientsReview from "@/container/Home/ClientsReviewSection";
 import HeroAll from "@/container/HeroAll";
 
-
-export default function ResidencesPage(): JSX.Element {
+type HeroAllProps = {
+    name: string;
+    page: string;
+    path: string;
+};
+const ResidencesPage: React.FC<HeroAllProps> = ({ page }) => {
     const [srcollBG, setSrcollBG] = useState<number>(0);
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -26,7 +23,7 @@ export default function ResidencesPage(): JSX.Element {
     return (
         <LayOut>
             <Head>
-                <title>HOME | Belletti-Niresidence</title>
+                <title>Residences | Belletti-Niresidence</title>
                 <meta
                     name="description"
                     content="T ACTIVE"
@@ -34,8 +31,9 @@ export default function ResidencesPage(): JSX.Element {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='residences-page'>
-                <HeroAll />
+                <HeroAll name="" page="residences" path="" />
             </div>
         </LayOut>
     );
 }
+export default ResidencesPage;

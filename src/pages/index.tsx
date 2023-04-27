@@ -10,7 +10,8 @@ import TeamSection from "@/container/Home/TeamSection";
 import ClientsReview from "@/container/Home/ClientsReviewSection";
 
 
-export default function HomePage(): JSX.Element {
+const HomePage: React.FC = () => {
+
   const [srcollBG, setSrcollBG] = useState<number>(0);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -25,7 +26,7 @@ export default function HomePage(): JSX.Element {
   return (
     <LayOut>
       <Head>
-        <title>HOME | Belletti-Niresidence</title>
+        <title>Wellcome | Belletti-Niresidence</title>
         <meta
           name="description"
           content="T ACTIVE"
@@ -44,3 +45,4 @@ export default function HomePage(): JSX.Element {
     </LayOut>
   );
 }
+export default HomePage;

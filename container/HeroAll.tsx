@@ -2,8 +2,12 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import { Container, Row, Col, Carousel, Button, Image, Breadcrumb, BreadcrumbItem } from 'react-bootstrap';
 import Link from 'next/link';
-
-const HeroAll: React.FC = () => {
+type HeroAllProps = {
+  name: string;
+  page: string;
+  path: string;
+};
+const HeroAll: React.FC<HeroAllProps> = (hero) => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -15,11 +19,11 @@ const HeroAll: React.FC = () => {
       <Container className="">
         <Row className="align-items-center">
           <Col lg={6}>
-            <h1 className="display-4 mb-3 animated slideInDown">About Us</h1>
+            <h1 className="display-4 mb-3 animated slideInDown">{hero.page}</h1>
             <nav aria-label="breadcrumb animated slideInDown">
               <Breadcrumb className="mb-0">
-                <Link href="/" className='breadcrumb-item'>Home</Link>
-                <BreadcrumbItem active>About Us</BreadcrumbItem>
+                <Link href={hero.path} className='breadcrumb-item'>Home</Link>
+                <BreadcrumbItem active>{hero.name}</BreadcrumbItem>
               </Breadcrumb>
             </nav>
           </Col>

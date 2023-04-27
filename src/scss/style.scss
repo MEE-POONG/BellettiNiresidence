@@ -123,6 +123,23 @@ a {
     position: relative;
     z-index: 99;
 }
-.font-bold{
+.font-bold {
     font-weight: bold;
+}
+
+.gallery-list {
+    position: relative;
+    .img-fluid {
+        transition: transform 0.5s ease;
+        position: relative;
+    }
+    &:hover {
+        .img-fluid {
+            z-index: 1;
+        }
+        .img-fluid:hover {
+            transform: scale(1.5);
+            z-index: 999;
+        }
+    }
 }

@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Slider from 'react-slick';
+import Slider, { CustomArrowProps } from 'react-slick';
 
 interface RequestProps { }
+const SampleNextArrow: FC<CustomArrowProps> = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={"d-none"}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    />
+  );
+};
 
+const SamplePrevArrow: FC<CustomArrowProps> = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={"d-none"}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+};
+const imagesOne = [
+  { img: 'images/hero-4.jpg' },
+  { img: 'images/hero-5.jpg' },
+  { img: 'images/hero-6.jpg' },
+];
+const imagesTwo = [
+  { img: 'images/hero-7.jpg' },
+  { img: 'images/hero-8.jpg' },
+  { img: 'images/hero-9.jpg' },
+];
 const RequestSection: React.FC<RequestProps> = () => {
   const settings = {
     dots: false,
@@ -13,8 +43,8 @@ const RequestSection: React.FC<RequestProps> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    nextArrow: <div className='d-none' />,
-    prevArrow: <div className='d-none' />
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />
   };
   return (
     <div className='request'>
@@ -25,16 +55,16 @@ const RequestSection: React.FC<RequestProps> = () => {
             <div className='g-3 img-twice position-relative h-100'>
               <div className="img-fluid bg-light p-3">
                 <Slider {...settings}>
-                  <img src="images/hero-4.jpg" alt="" />
-                  <img src="images/hero-5.jpg" alt="" />
-                  <img src="images/hero-6.jpg" alt="" />
+                  {imagesOne.map((image, index) => (
+                    <img key={index} src={image.img} alt={`Slide ${index}`} />
+                  ))}
                 </Slider>
               </div>
               <div className="img-fluid bg-light p-3">
                 <Slider {...settings}>
-                  <img src="images/hero-7.jpg" alt="" />
-                  <img src="images/hero-8.jpg" alt="" />
-                  <img src="images/hero-9.jpg" alt="" />
+                  {imagesOne.map((image, index) => (
+                    <img key={index} src={image.img} alt={`Slide ${index}`} />
+                  ))}
                 </Slider>
               </div>
             </div>
