@@ -22,8 +22,17 @@ const SelectRoomSection: React.FC = () => {
     <div className=" selectroom-section">
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="typeA" >
-          <Row className='select mx-0 px-2 py-4'>
-            <Col className='max-width'>
+          <Row className='select mx-0 px-0 py-4'>
+            <Col sm="12">
+              <Nav variant="pills" className='mb-4'>
+                {roomTypes.map((type) => (
+                  <Nav.Item key={type.key} >
+                    <Nav.Link className='text-center font-bold f-f-roboto' eventKey={type.key}>{type.title}</Nav.Link>
+                  </Nav.Item>
+                ))}
+              </Nav>
+            </Col>
+            <Col className='max-width-content'>
               <Nav variant="pills" className="flex-column">
                 {roomTypes.map((type) => (
                   <Nav.Item key={type.key} >
@@ -50,7 +59,7 @@ const SelectRoomSection: React.FC = () => {
           </Row>
         </Tab.Container>
       </Container>
-    </div>
+    </div >
   );
 };
 

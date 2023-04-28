@@ -40,7 +40,7 @@ export default function NavigationBar(): JSX.Element {
           <Offcanvas.Header closeButton>
             <Image src="images/logo.png" alt="logo" className='logo-nav' />
           </Offcanvas.Header>
-          <Offcanvas.Body bsPrefix='navbar-nav ms-auto'>
+          <Offcanvas.Body bsPrefix='navbar-nav ms-lg-auto'>
             <Nav className="f-f-domine">
               <Link href="/" className="nav-link active">
                 Wellcome

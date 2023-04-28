@@ -10,9 +10,9 @@ const LocationAll: React.FC = () => {
     }, []);
 
     return (
-        <Container fluid className="mt-5 py-5 mb-5 text-center">
-            <Image className="img-fluid bg-white p-3 w-50" src="images/map.png" alt="" />
-        </Container>
+        <div className="location mt-5 mb-5 text-center">
+            <Image className="img-fluid bg-white p-3 w-100" src="images/map.png" alt="" />
+        </div>
     );
 };
 

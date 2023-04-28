@@ -21,7 +21,7 @@ const SelectFloorSection: React.FC = () => {
     <div className="selectroom-section">
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="floor1" >
-          <Row className='select mx-0 px-2 py-4'>
+          <Row className='select mx-0 px-0 py-4'>
             <Col className='max-width'>
               <Nav variant="pills" className="flex-column">
                 {floorType.map((floor) => (

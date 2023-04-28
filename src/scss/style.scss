@@ -143,7 +143,7 @@ a {
         }
     }
 }
-.max-width {
+.max-width-content {
     max-width: max-content;
 }
 .gallery-show {
@@ -160,6 +160,15 @@ a {
             &:hover {
                 color: #3694ea;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .location {
+        img {
+            height: 100vh;
+            object-fit: contain;
         }
     }
 }
