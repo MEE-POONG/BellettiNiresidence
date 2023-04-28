@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
         <RequestSection />
         <WhySection />
         <ServicesSection />
-        <WorkSection />
+        {/* <WorkSection /> */}
         <GalleryList/>
         {/* <TeamSection /> */}
         {/* <ClientsReview /> */}

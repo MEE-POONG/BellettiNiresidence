@@ -69,13 +69,13 @@ const GalleryList: React.FC = () => {
     return (
         <div className="gallery-show mt-5 ">
             <Container>
-                <div className="text-center mx-auto mb-3" style={{ maxWidth: '500px' }}>
-                    <h1 className="display-6 mb-0 text-backblue">Gallery</h1>
+                <div className="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: '500px' }}>
+                    <p className="text-primary text-uppercase mb-2">Our Gallery</p>
                 </div>
-                <Slider {...settings2} asNavFor={nav1} ref={(slider:any) => setNav2(slider)} className="show mx-4">
+                <Slider {...settings2} asNavFor={nav1} ref={(slider: any) => setNav2(slider)} className="show mx-4">
                     {createSlides()}
                 </Slider>
-                <Slider {...settings} asNavFor={nav2} ref={(slider:any) => setNav1(slider)} className="select mx-4">
+                <Slider {...settings} asNavFor={nav2} ref={(slider: any) => setNav1(slider)} className="select mx-4">
                     {createSlides()}
                 </Slider>
             </Container>
