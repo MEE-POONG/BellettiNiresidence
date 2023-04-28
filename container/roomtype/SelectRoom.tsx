@@ -23,7 +23,7 @@ const SelectRoomSection: React.FC = () => {
       <Container>
         <Tab.Container id="left-tabs-example" defaultActiveKey="typeA" >
           <Row className='select mx-0 px-0 py-4'>
-            <Col sm="12">
+            <Col sm="12" className='select-nav'>
               <Nav variant="pills" className='mb-4'>
                 {roomTypes.map((type) => (
                   <Nav.Item key={type.key} >
@@ -32,7 +32,7 @@ const SelectRoomSection: React.FC = () => {
                 ))}
               </Nav>
             </Col>
-            <Col className='max-width-content'>
+            <Col className='max-width-content select-tab'>
               <Nav variant="pills" className="flex-column">
                 {roomTypes.map((type) => (
                   <Nav.Item key={type.key} >
