@@ -3,7 +3,7 @@ import { Carousel, Container } from "react-bootstrap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider, { CustomArrowProps } from "react-slick";
 
-const GalleryPage: React.FC = () => {
+const GalleryList: React.FC = () => {
     const [nav1, setNav1] = useState<Slider | null>(null);
     const [nav2, setNav2] = useState<Slider | null>(null);
     useEffect(() => {
@@ -83,4 +83,4 @@ const GalleryPage: React.FC = () => {
     );
 }
 
-export default GalleryPage;
+export default GalleryList;

@@ -4,6 +4,7 @@ import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
 import DesignSection from "@/container/Residences/DesignSection";
 import LocationAll from "@/container/LocationAll";
+import GalleryList from "@/container/GalleryList";
 
 type HeroAllProps = {
     name: string;
@@ -36,8 +37,9 @@ const ResidencesPage: React.FC<HeroAllProps> = ({ page }) => {
                 <HeroAll name="Residences" page="Residences" path="residences" />
                 <DesignSection />
                 <LocationAll />
+                <GalleryList/>
             </div>
         </LayOut>
     );
 }
-export default ResidencesPage;
+export default GalleryList;

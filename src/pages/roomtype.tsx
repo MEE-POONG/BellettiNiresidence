@@ -4,8 +4,8 @@ import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
 import DesignSection from "@/container/Residences/DesignSection";
 import LocationAll from "@/container/LocationAll";
-import SelectRoomSection from "@/container/RoomType/SelectRoom";
-import GalleryPage from "@/container/Gallery";
+import GalleryList from "@/container/GalleryList";
+import SelectRoomSection from "@/container/roomtype/SelectRoom";
 
 type HeroAllProps = {
     name: string;
@@ -38,7 +38,7 @@ const RoomTypePage: React.FC<HeroAllProps> = ({ page }) => {
                 <HeroAll name="Room Type" page="RoomType" path="roomtype" />
                 {/* <DesignSection /> */}
                 <SelectRoomSection />
-                <GalleryPage/>
+                <GalleryList/>
                 <LocationAll />
             </div>
         </LayOut>
