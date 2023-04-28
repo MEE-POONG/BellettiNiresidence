@@ -2,17 +2,15 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
-import DesignSection from "@/container/Residences/DesignSection";
 import LocationAll from "@/container/LocationAll";
-import SelectRoomSection from "@/container/RoomType/SelectRoom";
-import GalleryPage from "@/container/Gallery";
+import SelectFloorSection from "@/container/FloorType/SelectFloorSection";
 
 type HeroAllProps = {
     name: string;
     page: string;
     path: string;
 };
-const RoomTypePage: React.FC<HeroAllProps> = ({ page }) => {
+const FloorPlanPage: React.FC<HeroAllProps> = ({ page }) => {
     const [srcollBG, setSrcollBG] = useState<number>(0);
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -27,7 +25,7 @@ const RoomTypePage: React.FC<HeroAllProps> = ({ page }) => {
     return (
         <LayOut>
             <Head>
-                <title>RoomTypePage | Belletti-Niresidence</title>
+                <title>FloorPlan | Belletti-Niresidence</title>
                 <meta
                     name="description"
                     content="T ACTIVE"
@@ -35,13 +33,12 @@ const RoomTypePage: React.FC<HeroAllProps> = ({ page }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className='roomtype-page'>
-                <HeroAll name="Room Type" page="RoomType" path="roomtype" />
+                <HeroAll name="Floor Plan" page="Floor Plan" path="floorplan" />
                 {/* <DesignSection /> */}
-                <SelectRoomSection />
-                <GalleryPage/>
+                <SelectFloorSection />
                 <LocationAll />
             </div>
         </LayOut>
     );
 }
-export default RoomTypePage;
+export default FloorPlanPage;

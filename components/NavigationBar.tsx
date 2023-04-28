@@ -58,10 +58,6 @@ export default function NavigationBar(): JSX.Element {
                 FLOOR PLANS
                 {/* <p>แผนผังชั้น</p> */}
               </Link>
-              <Link href="/amenities" className="nav-link">
-                AMENITIES
-                {/* <p>สิ่งอำนวยความสะดวก</p> */}
-              </Link>
               {/* <Link href="/engage" className="nav-link">
               ENGAGE
             </Link> */}

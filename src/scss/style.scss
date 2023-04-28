@@ -146,3 +146,20 @@ a {
 .max-width {
     max-width: max-content;
 }
+.gallery-show {
+    img {
+        background-color: #ffffff;
+        box-shadow: -1px 7px 15px 0px rgba(0, 0, 0, 0.07);
+    }
+}
+.slick-slider.slick-initialized {
+    .slick-arrow {
+        &.slick-prev,
+        &.slick-next {
+            color: #113f6e;
+            &:hover {
+                color: #3694ea;
+            }
+        }
+    }
+}

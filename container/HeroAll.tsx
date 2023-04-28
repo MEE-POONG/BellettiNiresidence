@@ -17,13 +17,13 @@ const HeroAll: React.FC<HeroAllProps> = (hero) => {
   return (
     <Container fluid className="hero-header bg-light py-5 mb-5">
       <Container className="">
-        <Row className="align-items-center">
+        <Row className="align-items-center font-bold f-f-roboto">
           <Col lg={6}>
             <h1 className="display-4 mb-3 animated slideInDown">{hero.page}</h1>
             <nav aria-label="breadcrumb animated slideInDown">
               <Breadcrumb className="mb-0">
                 <Link href={hero.path} className='breadcrumb-item'>Home</Link>
-                <BreadcrumbItem active>{hero.name}</BreadcrumbItem>
+                <BreadcrumbItem className='text-backblue' active>{hero.name}</BreadcrumbItem>
               </Breadcrumb>
             </nav>
           </Col>

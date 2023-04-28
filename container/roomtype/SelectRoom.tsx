@@ -21,13 +21,13 @@ const SelectRoomSection: React.FC = () => {
   return (
     <div className=" selectroom-section">
       <Container>
-        <Tab.Container id="left-tabs-example" defaultActiveKey="typeA">
-          <Row>
+        <Tab.Container id="left-tabs-example" defaultActiveKey="typeA" >
+          <Row className='select mx-0 px-2 py-4'>
             <Col className='max-width'>
               <Nav variant="pills" className="flex-column">
                 {roomTypes.map((type) => (
                   <Nav.Item key={type.key} >
-                    <Nav.Link className='text-center' eventKey={type.key}>{type.title}</Nav.Link>
+                    <Nav.Link className='text-center font-bold f-f-roboto' eventKey={type.key}>{type.title}</Nav.Link>
                   </Nav.Item>
                 ))}
               </Nav>
@@ -38,8 +38,8 @@ const SelectRoomSection: React.FC = () => {
                   <Tab.Pane eventKey={type.key} key={type.key}>
                     <Row>
                       {type.images.map((image, index) => (
-                        <Col key={index} sm={6}>
-                          <Image src={`/images/` + image} alt={`Image for ${type.title}`} fluid className='w-100'/>
+                        <Col key={index} sm={6} className='col-show'>
+                          <Image src={`/images/` + image} alt={`Image for ${type.title}`} fluid className='w-100' />
                         </Col>
                       ))}
                     </Row>
