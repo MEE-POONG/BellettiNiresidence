@@ -1,36 +1,22 @@
-import React, { FC, Component } from "react";
-import { Container } from "react-bootstrap";
+import React, { FC, Component, useState, useEffect } from "react";
+import { Carousel, Container } from "react-bootstrap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider, { CustomArrowProps } from "react-slick";
-const SampleNextArrow: FC<CustomArrowProps> = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}
-        >
-            <FaArrowRight />
-        </div>
-    );
-};
 
-const SamplePrevArrow: FC<CustomArrowProps> = (props) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={className}
-            style={{ ...style, display: "block", background: "green" }}
-            onClick={onClick}
-        />
-    );
-};
 const GalleryPage: React.FC = () => {
+    const [nav1, setNav1] = useState<Slider | null>(null);
+    const [nav2, setNav2] = useState<Slider | null>(null);
+    useEffect(() => {
+        console.log('nav1:', nav1);
+    }, [nav1]);
+    useEffect(() => {
+        console.log('nav1:', nav1);
+    }, [nav2]);
+
     const settings = {
         dots: false,
         infinite: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 1000,
         autoplay: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -47,8 +33,8 @@ const GalleryPage: React.FC = () => {
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                 }
             },
             {
@@ -60,17 +46,37 @@ const GalleryPage: React.FC = () => {
             }
         ]
     };
-
+    const settings2 = {
+        dots: false,
+        infinite: true,
+        speed: 1000,
+        autoplay: true,
+        nextArrow: <FaArrowRight />,
+        prevArrow: <FaArrowLeft />,
+        slidesToShow: 1,
+        swipeToSlide: true,
+        focusOnSelect: true,
+    };
+    const createSlides = () =>
+        Array(20)
+            .fill(null)
+            .map((_, index) => (
+                <div key={index} className="p-1">
+                    <img src={`/images/gallery${index + 1}.jpg`} alt={`Image-${index + 1}`} style={{ width: '100%', objectFit: 'cover' }} />
+                </div>
+            ));
     const images = Array(20).fill(null).map((_, index) => `/images/gallery${index + 1}.jpg`);
     return (
-        <div className="gallery-show">
+        <div className="gallery-show mt-5 ">
             <Container>
-                <Slider {...settings} className="mx-4">
-                    {images.map((imgSrc, index) => (
-                        <div key={index} className="p-2">
-                            <img src={imgSrc} alt={`Image-${index + 1}`} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
-                        </div>
-                    ))}
+                <div className="text-center mx-auto mb-3" style={{ maxWidth: '500px' }}>
+                    <h1 className="display-6 mb-0 text-backblue">Gallery</h1>
+                </div>
+                <Slider {...settings2} asNavFor={nav1} ref={(slider) => setNav2(slider)} className="show mx-4">
+                    {createSlides()}
+                </Slider>
+                <Slider {...settings} asNavFor={nav2} ref={(slider) => setNav1(slider)} className="select mx-4">
+                    {createSlides()}
                 </Slider>
             </Container>
         </div>

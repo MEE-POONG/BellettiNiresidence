@@ -1,33 +1,56 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useState } from 'react';
+import Slider, { Settings } from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
-type ReactSlickExampleProps = {
-    images: string[];
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { Container } from 'react-bootstrap';
+type checkSlide = {
+    asNavFor: string;
 };
+const AsNavFor: React.FC<checkSlide> = () => {
+    const [nav1, setNav1] = useState<Slider | null>(null);
+    const [nav2, setNav2] = useState<Slider | null>(null);
 
-const ReactSlickExample: React.FC<ReactSlickExampleProps> = () => {
-    const images = [
-        'https://via.placeholder.com/300x200?text=Slide1',
-        'https://via.placeholder.com/300x200?text=Slide2',
-        'https://via.placeholder.com/300x200?text=Slide3',
-    ];
-    const settings = {
-        dots: true,
+    const settings: Settings = {
+        dots: false,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        autoplay: true,
+        slidesToShow: 5,
         slidesToScroll: 1,
+        nextArrow: <FaArrowRight />,
+        prevArrow: <FaArrowLeft />,
     };
 
+    const settings2: Settings = {
+        ...settings,
+        slidesToShow: 1,
+        swipeToSlide: true,
+        focusOnSelect: true,
+    };
+
+    const createSlides = () =>
+        Array(20)
+            .fill(null)
+            .map((_, index) => (
+                <div key={index} className="p-1">
+                    <img src={`/images/gallery${index + 1}.jpg`} alt={`Image-${index + 1}`} style={{ width: '100%', height: '150px', objectFit: 'cover' }} />
+                </div>
+            ));
+
     return (
-        <Slider {...settings}>
-            {images.map((image, index) => (
-                <img key={index} src={image} alt={`Slide ${index}`} />
-            ))}
-        </Slider>
+        <div>
+            <Container >
+                <Slider {...settings2} asNavFor={nav1} ref={(slider) => setNav2(slider)}>
+                    {createSlides()}
+                </Slider>
+                <Slider {...settings} asNavFor={nav2} ref={(slider) => setNav1(slider)}>
+                    {createSlides()}
+                </Slider>
+            </Container>
+
+        </div>
     );
 };
 
-export default ReactSlickExample;
+export default AsNavFor;
