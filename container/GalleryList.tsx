@@ -4,8 +4,8 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider, { CustomArrowProps } from "react-slick";
 
 const GalleryList: React.FC = () => {
-    const [nav1, setNav1] = useState<Slider | null>(null);
-    const [nav2, setNav2] = useState<Slider | null>(null);
+    const [nav1, setNav1] = useState<Slider | undefined>(undefined);
+    const [nav2, setNav2] = useState<Slider | undefined>(undefined);
     useEffect(() => {
         console.log('nav1:', nav1);
     }, [nav1]);
@@ -72,10 +72,10 @@ const GalleryList: React.FC = () => {
                 <div className="text-center mx-auto mb-3" style={{ maxWidth: '500px' }}>
                     <h1 className="display-6 mb-0 text-backblue">Gallery</h1>
                 </div>
-                <Slider {...settings2} asNavFor={nav1} ref={(slider) => setNav2(slider)} className="show mx-4">
+                <Slider {...settings2} asNavFor={nav1} ref={(slider:any) => setNav2(slider)} className="show mx-4">
                     {createSlides()}
                 </Slider>
-                <Slider {...settings} asNavFor={nav2} ref={(slider) => setNav1(slider)} className="select mx-4">
+                <Slider {...settings} asNavFor={nav2} ref={(slider:any) => setNav1(slider)} className="select mx-4">
                     {createSlides()}
                 </Slider>
             </Container>

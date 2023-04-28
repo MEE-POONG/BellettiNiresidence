@@ -8,6 +8,7 @@ import ServicesSection from "@/container/Home/ServicesSection";
 import WorkSection from "@/container/Home/GallerySection";
 import TeamSection from "@/container/Home/TeamSection";
 import ClientsReview from "@/container/Home/ClientsReviewSection";
+import GalleryList from "./residences";
 
 
 const HomePage: React.FC = () => {
@@ -39,6 +40,7 @@ const HomePage: React.FC = () => {
         <WhySection />
         <ServicesSection />
         <WorkSection />
+        <GalleryList/>
         {/* <TeamSection /> */}
         {/* <ClientsReview /> */}
       </div>
