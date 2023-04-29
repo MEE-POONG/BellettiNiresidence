@@ -236,7 +236,8 @@ $border-color_3: transparent transparent transparent #ffffff;
 		filter: sepia(100%) hue-rotate(200deg);
 		transition: filter 0.3s ease;
 	}
-	&:hover {
+	&:hover,
+	&.active {
 		margin-top: -10px;
 		background: var(--primary) !important;
 		* {
