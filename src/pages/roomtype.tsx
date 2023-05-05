@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
-import DesignSection from "@/container/Residences/DesignSection";
 import LocationAll from "@/container/LocationAll";
 import GalleryList from "@/container/GalleryList";
 import SelectRoomSection from "@/container/roomtype/SelectRoom";
@@ -36,7 +35,6 @@ const RoomTypePage: React.FC<HeroAllProps> = ({ page }) => {
             </Head>
             <div className='roomtype-page'>
                 <HeroAll name="Room Type" page="RoomType" path="roomtype" />
-                {/* <DesignSection /> */}
                 <SelectRoomSection />
                 <GalleryList/>
                 <LocationAll />

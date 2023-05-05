@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import Head from 'next/head';
 import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
-import DesignSection from "@/container/Residences/DesignSection";
 import LocationAll from "@/container/LocationAll";
-import GalleryList from "@/container/GalleryList";
+import SelectFloorSection from "@/container/FloorType/SelectFloorSection";
 
 type HeroAllProps = {
     name: string;
     page: string;
     path: string;
 };
-const ResidencesPage: React.FC<HeroAllProps> = ({ page }) => {
+const InquirePage: React.FC<HeroAllProps> = ({ page }) => {
     const [srcollBG, setSrcollBG] = useState<number>(0);
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
@@ -26,20 +25,20 @@ const ResidencesPage: React.FC<HeroAllProps> = ({ page }) => {
     return (
         <LayOut>
             <Head>
-                <title>Residences | Belletti-Niresidence</title>
+                <title>FloorPlan | Belletti-Niresidence</title>
                 <meta
                     name="description"
                     content="T ACTIVE"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className='residences-page'>
-                <HeroAll name="Residences" page="Residences" path="residences" />
-                <DesignSection />
+            <div className='roomtype-page'>
+                <HeroAll name="Inquire" page="Inquire" path="inquire" />
+                {/* <SelectFloorSection />
+                 */}
                 <LocationAll />
-                <GalleryList/>
             </div>
         </LayOut>
     );
 }
-export default ResidencesPage;
+export default InquirePage;

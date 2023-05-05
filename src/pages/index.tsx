@@ -5,10 +5,7 @@ import HeroSection from '@/container/Home/HeroSection';
 import RequestSection from "@/container/Home/RequestSection";
 import WhySection from "@/container/Home/WhySection";
 import ServicesSection from "@/container/Home/ServicesSection";
-import WorkSection from "@/container/Home/GallerySection";
-import TeamSection from "@/container/Home/TeamSection";
-import ClientsReview from "@/container/Home/ClientsReviewSection";
-import GalleryList from "./residences";
+import GalleryList from "@/container/GalleryList";
 
 
 const HomePage: React.FC = () => {
@@ -39,10 +36,7 @@ const HomePage: React.FC = () => {
         <RequestSection />
         <WhySection />
         <ServicesSection />
-        {/* <WorkSection /> */}
         <GalleryList/>
-        {/* <TeamSection /> */}
-        {/* <ClientsReview /> */}
       </div>
     </LayOut>
   );

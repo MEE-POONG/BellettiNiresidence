@@ -6,12 +6,6 @@ import Slider, { CustomArrowProps } from "react-slick";
 const GalleryList: React.FC = () => {
     const [nav1, setNav1] = useState<Slider | undefined>(undefined);
     const [nav2, setNav2] = useState<Slider | undefined>(undefined);
-    useEffect(() => {
-        console.log('nav1:', nav1);
-    }, [nav1]);
-    useEffect(() => {
-        console.log('nav1:', nav1);
-    }, [nav2]);
 
     const settings = {
         dots: false,
