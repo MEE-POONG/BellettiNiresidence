@@ -4,6 +4,7 @@ import LayOut from "@/components/LayOut";
 import HeroAll from "@/container/HeroAll";
 import LocationAll from "@/container/LocationAll";
 import SelectFloorSection from "@/container/FloorType/SelectFloorSection";
+import ContactUsForm from "@/container/inquire/ContactUsForm";
 
 type HeroAllProps = {
     name: string;
@@ -34,8 +35,7 @@ const InquirePage: React.FC<HeroAllProps> = ({ page }) => {
             </Head>
             <div className='roomtype-page'>
                 <HeroAll name="Inquire" page="Inquire" path="inquire" />
-                {/* <SelectFloorSection />
-                 */}
+                <ContactUsForm />
                 <LocationAll />
             </div>
         </LayOut>
